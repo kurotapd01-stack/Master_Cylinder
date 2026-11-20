@@ -1063,7 +1063,7 @@ function submitSetup(){
     btn.disabled=false;
     if(e.auth)return; // onUnauthorized แสดงข้อความให้แล้ว
     localStorage.removeItem(LS_TOKEN);
-    $('setupMsg').textContent=e.network?'ติดต่อเซิร์ฟเวอร์ไม่ได้ — ต้องต่อเน็ตตอนตั้งค่าครั้งแรก':e.message;
+    $('setupMsg').textContent=e.network?'ติดต่อเซิร์ฟเวอร์ไม่ได้ — ต้องต่อเน็ตตอนตั้งค่าครั้งแรก ['+e.message+']':e.message;
   });
 }
 function afterReady(){warmCache();syncQueue(false);loadProcessTotals();loadCycleTimeMaster();loadEmployees()}
